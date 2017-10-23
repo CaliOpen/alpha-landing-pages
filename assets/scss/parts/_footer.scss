@@ -1,0 +1,25 @@
+.co-footer {
+  position: relative;
+  z-index: 890;
+  margin-top: $co-spacing__large;
+  padding: $co-spacing__small 0;
+  background: $co-color__back--low;
+  font-size: $co-font__size--small;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    min-width: 130px;
+    height: 40px;
+    background-image: url($co-img__logo);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    color: $co-color__text--high;
+    font-weight: 600;
+    text-decoration: none;
+
+    span { visibility: hidden;}
+  }
+
+}

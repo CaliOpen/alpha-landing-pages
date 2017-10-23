@@ -1,0 +1,126 @@
+.mauticform_wrapper {
+  background: white;
+  color: $co-color__text--low;
+  font-size: 1rem;
+}
+
+
+.mauticform-page-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mauticform-name {
+  margin-bottom: $co-spacing__small;
+  color: #0f5a71;
+  font-size: 1.2rem;
+  font-weight: 700;
+ }
+
+.mauticform-row {
+  flex-basis: initial;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+
+  &.mauticform-button-wrapper {
+    width: 100%;
+  }
+}
+
+.mauticform-label {
+  display: block;
+  padding: $co-spacing__small / 2 0;
+}
+
+.mauticform-row {
+  .mauticform-required {
+    .mauticform-label {
+      &::after {
+        display: inline;
+        content: ' *';
+      }
+    }
+  }
+}
+
+$placeholder-color: lighten($co-color__text--low, 25%);
+
+.mauticform-input {
+  width: 100%;
+  padding: 0 $co-spacing__small / 2;
+  border: 1px solid $co-color__text--low;
+  font-family: inherit;
+  font-size: 1.1rem;
+  line-height: 2;
+  box-sizing: border-box;
+
+  // ::placeholder
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $placeholder-color;
+    font-size: .9rem;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $placeholder-color;
+    font-size: .9rem;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $placeholder-color;
+    font-size: .9rem;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $placeholder-color;
+    font-size: .9rem;
+  }
+}
+
+.mauticform-button-wrapper {
+  .mauticform-button {
+    display: block;
+    width: 100%;
+    margin-top: $co-spacing__small;
+    padding: 18px;
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+    background: $co-color__contrast;
+    box-shadow: 4px 4px 0 #bb881a;
+    font-size: 1.375rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    &:focus {
+      box-shadow: 0 0 0 #bb881a;
+    }
+
+    .btn-default {
+      &[disabled] { color: rgba(#fff, .7); }
+    }
+
+    :hover {
+      border-bottom: 5px solid $co-color__contrast;
+    }
+  }
+}
+
+.mauticform-description { margin-top: 2px; margin-bottom: 10px; }
+.mauticform-error { margin-bottom: 10px; color: red; }
+.mauticform-message { margin-bottom: 10px;color: green; }
+.mauticform-helpmessage { display: block; font-size: 0.9em; margin-bottom: 3px; }
+.mauticform-errormsg { display: block; color: red; margin-top: 2px; }
+
+
+@include breakpoint(small) {
+  .mauticform-row {
+    flex-basis: initial;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 50%;
+
+    &:first-of-type {
+      padding-right: $co-spacing__small;
+    }
+
+  }
+}

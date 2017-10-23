@@ -1,0 +1,26 @@
+.co-form {
+  position: relative;
+  top: -180px;
+  margin-bottom: -180px;
+
+  &__form {
+    max-width: $co-page-col__width;
+    padding: $co-spacing__small;
+    border-radius: 3px;
+    background: white;
+    color: $co-color__text--low;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  &__legend {
+    display: inline-block;
+    color: #115972;
+  }
+
+  &__tip {
+    display: inline-block;
+    padding-top: 12px;
+    font-size: $co-font__size--small;
+  }
+}
